@@ -1,6 +1,7 @@
 {
-  "name": "CalculatorTypescript",
+  "name": "calculator-typescript",
   "version": "0.0.1",
+  "author": "Sakiko",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
