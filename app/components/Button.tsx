@@ -8,17 +8,23 @@ import {
 } from 'react-native';
 
 interface Props {
-  text: string,
-  onPress: () => void,
-  backgroundColor: string,
-  color: string,
-  wide: boolean,
+  text: string;
+  onPress: any;
+  backgroundColor: string;
+  color: string;
+  wide: boolean;
 }
 
 const windowWidth: number = Dimensions.get('window').width;
 const buttonWidth: number = windowWidth / 4;
 
-const Button: React.FC<Props> = ({ text, onPress, backgroundColor, color, wide }) => {
+const Button: React.FC<Props> = ({
+  text,
+  onPress,
+  backgroundColor,
+  color,
+  wide,
+}) => {
   const containerStyles: string[] = [styles.container];
   const textStyles: string[] = [styles.text];
 
@@ -35,11 +41,9 @@ const Button: React.FC<Props> = ({ text, onPress, backgroundColor, color, wide }
   }
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onPress}>
       <View style={containerStyles}>
-        <Text style={textStyles}>
-          {text}
-        </Text>
+        <Text style={textStyles}>{text}</Text>
       </View>
     </TouchableOpacity>
   );

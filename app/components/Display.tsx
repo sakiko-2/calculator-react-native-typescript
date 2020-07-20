@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 interface Props {
-  text: string,
+  text: string;
 }
 
 const Display: React.FC<Props> = ({ text }) => (
